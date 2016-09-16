@@ -2,7 +2,7 @@
   <div class="card">
     <md-card>
       <md-card-header>
-        <img md-card-avatar src="path/to/img.png">
+        <img md-card-avatar [src]="getUrl(question)">
         <md-card-title>{{ question.title }}</md-card-title>
         <md-card-subtitle>{{ question.author }}</md-card-subtitle>
       </md-card-header>
