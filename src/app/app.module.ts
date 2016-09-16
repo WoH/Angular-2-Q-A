@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AppComponent } from './app.component';
 import { QuestionListComponent } from './components/question-list/question-list.component';
 import { QuestionPoseComponent } from './components/question-pose/question-pose.component';
+import { UpvoteSortingPipe } from './pipes/upvote-sorting.pipe';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAbxVFNtwI437ePK5NfPAazfD_oTuDqvmE",
@@ -26,7 +27,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     QuestionListComponent,
-    QuestionPoseComponent
+    QuestionPoseComponent,
+    UpvoteSortingPipe
   ],
   imports: [
     BrowserModule,

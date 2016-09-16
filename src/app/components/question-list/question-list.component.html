@@ -1,4 +1,4 @@
-<div *ngFor="let question of questions | async">
+<div *ngFor="let question of questions | async | upvoteSorting">
   <div class="card">
     <md-card>
       <md-card-header>
