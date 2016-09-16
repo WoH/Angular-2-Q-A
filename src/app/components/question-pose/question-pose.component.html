@@ -1,7 +1,16 @@
 <md-card class="card">
   <md-toolbar>What would you like to know?</md-toolbar>
   <md-card-content>
+
+    <md-button-toggle-group style="margin-top: 15px; margin-bottom: 15px;" name="Category">
+        <md-button-toggle (click)="question.category = 'General'" value="General" checked="true">General</md-button-toggle>
+        <md-button-toggle (click)="question.category = 'Angular'" value="Angular">Angular</md-button-toggle>
+        <md-button-toggle (click)="question.category = 'React'" value="React">React</md-button-toggle>
+        <md-button-toggle (click)="question.category = 'Backbone'" value="Backbone">Backbone</md-button-toggle>
+    </md-button-toggle-group>
+
     <form>
+
       <p><md-input [(ngModel)]="question.author" name="author" placeholder="Name" value="Anonymous"></md-input></p>      
       
       <p><md-input [(ngModel)]="question.title" name="title" placeholder="Question Title"></md-input></p>

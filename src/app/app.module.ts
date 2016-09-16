@@ -6,6 +6,8 @@ import { MdButtonModule } from '@angular2-material/button';
 import { MdCardModule } from '@angular2-material/card';
 import { MdInputModule } from '@angular2-material/input';
 import { MdToolbarModule } from '@angular2-material/toolbar';
+import { MdButtonToggleModule } from '@angular2-material/button-toggle';
+import { MdUniqueSelectionDispatcher } from '@angular2-material/core';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
@@ -34,9 +36,10 @@ export const firebaseConfig = {
     MdCardModule,
     MdInputModule,
     MdToolbarModule,
+    MdButtonToggleModule,
     AngularFireModule.initializeApp(firebaseConfig),
   ],
-  providers: [],
+  providers: [MdUniqueSelectionDispatcher],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
