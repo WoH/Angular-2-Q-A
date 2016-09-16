@@ -2,10 +2,10 @@
   <md-toolbar color="primary">What would you like to know?</md-toolbar>
   <md-card-content>
     <form>
-      <p><md-input class="demo" placeholder="Name" value="Anonymous"></md-input></p>      
+      <p><md-input [(ngModel)]="question.author" name="author" class="demo" placeholder="Name" value="Anonymous"></md-input></p>      
       
-      <p><md-input class="demo" placeholder="Question Title"></md-input></p>
-      <p><md-input class="demo" placeholder="Question"></md-input><p>
+      <p><md-input [(ngModel)]="question.title" name="title" class="demo" placeholder="Question Title"></md-input></p>
+      <p><md-input [(ngModel)]="question.content" name="content" class="demo" placeholder="Question"></md-input><p>
         
     </form>
   </md-card-content>
