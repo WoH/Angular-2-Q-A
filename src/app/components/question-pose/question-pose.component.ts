@@ -9,7 +9,7 @@ export class QuestionPoseComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
+  onAskClick() { }
 }

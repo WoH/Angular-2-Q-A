@@ -1,3 +1,15 @@
-<p>
-  question-pose works!
-</p>
+<md-card class="demo">
+  <md-toolbar color="primary">What would you like to know?</md-toolbar>
+  <md-card-content>
+    <form>
+      <p><md-input class="demo" placeholder="Name" value="Anonymous"></md-input></p>      
+      
+      <p><md-input class="demo" placeholder="Question Title"></md-input></p>
+      <p><md-input class="demo" placeholder="Question"></md-input><p>
+        
+    </form>
+  </md-card-content>
+  <md-card-actions>
+    <button md-fab (click)="onAskClick()" color="primary">Ask!</button>
+  </md-card-actions>
+</md-card>
