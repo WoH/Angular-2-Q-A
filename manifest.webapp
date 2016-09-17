@@ -3,8 +3,7 @@
   "short_name": "Ang2 Q&A",
   "icons": [],
   "theme_color": "#009688",
-  "background_color": "#f4f4f7",
-  "start_url": "/index.html",
   "display": "fullscreen",
+  "start_url": "/angular2-presentation",
   "orientation": "portrait"
 }
