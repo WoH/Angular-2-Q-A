@@ -11,7 +11,7 @@
     
     <form>
 
-      <p><md-input [(ngModel)]="question.author" name="author" placeholder="Name"></md-input></p>      
+      <p><md-input [(ngModel)]="question.author" name="author" placeholder="Name (optional)"></md-input></p>      
       
       <p><md-input [(ngModel)]="question.title" name="title" placeholder="Question Title"></md-input></p>
       <p><md-input [(ngModel)]="question.content" name="content" placeholder="Question"></md-input><p>
@@ -19,6 +19,8 @@
     </form>
   </md-card-content>
   <md-card-actions align="end">
-    <button md-fab (click)="onAskClick()" color="primary">Ask!</button>
+    <button md-fab 
+      [disabled]="question.title == '' && question. content == ''"
+      (click)="onAskClick()" color="primary">Ask!</button>
   </md-card-actions>
 </md-card>
