@@ -1,6 +1,13 @@
-.card {
-    margin: 15px;
-}
 md-input {
     width: 100%;
+}
+
+md-card {
+    margin: 15px 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+md-card-actions {
+    margin-right: 0;
 }

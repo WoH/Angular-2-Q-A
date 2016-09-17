@@ -2,25 +2,48 @@
   <md-toolbar>What would you like to know?</md-toolbar>
   <md-card-content>
 
-    <div style="text-align: center;"><md-button-toggle-group style="margin-top: 15px; margin-bottom: 15px;" name="Category">
-        <md-button-toggle (click)="question.category = 'General'" value="General" checked="true">General</md-button-toggle>
-        <md-button-toggle (click)="question.category = 'Angular'" value="Angular">Angular</md-button-toggle>
-        <md-button-toggle (click)="question.category = 'React'" value="React">React</md-button-toggle>
-        <md-button-toggle (click)="question.category = 'Backbone'" value="Backbone">Backbone</md-button-toggle>
-    </md-button-toggle-group></div>
+      <div style="text-align: center;">
+
+          <md-button-toggle-group style="margin-top: 15px; margin-bottom: 15px;" name="Category">
+
+              <md-button-toggle
+                      (click)="question.category = 'General'"
+                      value="General" checked="true">General
+              </md-button-toggle>
+              <md-button-toggle
+                      (click)="question.category = 'Angular'"
+                      value="Angular">Angular
+              </md-button-toggle>
+              <md-button-toggle
+                      (click)="question.category = 'React'"
+                      value="React">React
+              </md-button-toggle>
+              <md-button-toggle
+                      (click)="question.category = 'Backbone'"
+                      value="Backbone">Backbone
+              </md-button-toggle>
+
+          </md-button-toggle-group>
+
+      </div>
     
     <form>
 
       <p><md-input [(ngModel)]="question.author" name="author" placeholder="Name (optional)"></md-input></p>      
       
       <p><md-input [(ngModel)]="question.title" name="title" placeholder="Question Title"></md-input></p>
-      <p><md-input [(ngModel)]="question.content" name="content" placeholder="Question"></md-input><p>
+
+        <p>
+            <md-input [(ngModel)]="question.content" name="content" placeholder="Question"></md-input>
+        <p>
         
     </form>
   </md-card-content>
-  <md-card-actions align="end">
+
+    <md-card-actions align="end">
     <button md-raised-button 
       [disabled]="question.title == '' && question. content == ''"
       (click)="onAskClick()" color="primary">Ask!</button>
   </md-card-actions>
+
 </md-card>
