@@ -9,9 +9,11 @@ import { Question } from '../../models/question';
 })
 export class QuestionListComponent implements OnInit {
   questions: FirebaseListObservable<any>;
+  upvoted: any[];
 
-  constructor(af: AngularFire) { 
+  constructor(private af: AngularFire) { 
     this.questions = af.database.list('/questions');
+    this.upvoted = JSON.parse(localStorage.getItem('upvoted')) || [];
   }
 
   getUrl(question: Question) {
@@ -22,6 +24,16 @@ export class QuestionListComponent implements OnInit {
       case "Backbone": return "https://s3.amazonaws.com/urgeio-versus/backbone-js/front/front-1382439123416.flat.jpg"
     }
     return "";
+  }
+
+  upvote(key, question) {
+    this.upvoted.push(question.$key);
+    localStorage.setItem('upvoted', JSON.stringify(this.upvoted));
+    this.af.database.list('/questions').update(key, {upvotes: ++question.upvotes});
+  }
+
+  isUpvoted(question): boolean {
+    return this.upvoted.indexOf(question.$key) > -1;
   }
 
   ngOnInit() { }

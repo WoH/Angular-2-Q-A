@@ -10,6 +10,14 @@
       <md-card-content>
           <p>{{ question.content }}</p>
       </md-card-content>
+
+      <md-card-actions>
+        <button md-button 
+          (click)="upvote(question.$key, question)" 
+          color="primary" [disabled]="isUpvoted(question)">
+          {{question.upvotes}}
+        </button>
+      </md-card-actions>
         
     </md-card>
   </div>

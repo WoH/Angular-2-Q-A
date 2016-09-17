@@ -14,8 +14,4 @@ export class Question {
         this.upvotes = 0;
         this.category = 'General';
     }
-
-    public upvote() {
-        this.upvotes++;
-    }
 }
