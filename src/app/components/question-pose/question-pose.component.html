@@ -41,9 +41,11 @@
   </md-card-content>
 
     <md-card-actions align="end">
-    <button md-raised-button 
-      [disabled]="question.title == '' && question. content == ''"
-      (click)="onAskClick()" color="primary">Ask!</button>
+    <button md-raised-button
+            [disabled]="question.title == '' && question. content == ''"
+            (click)="onAskClick()" color="primary"><img style="height: 20px; width: 20px; padding-top: 10px"
+                                                        src="http://image.flaticon.com/icons/png/128/60/60516.png">
+    </button>
   </md-card-actions>
 
 </md-card>
